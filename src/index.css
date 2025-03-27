@@ -1,0 +1,33 @@
+:root {
+  --primary-button-color: #16a6af;
+  --primary-button-color-hover: #d6b316;
+  --admin-header-color: #63536c;
+  --admin-background-color: #eae9ebf2;
+  --base-color-admin-label: #848484;
+  --admin-input-text-color: #757575;
+  --admin-input-text-color-border: #b7b7b7;
+  --text-default-color: rgba(255, 255, 255, 0.87);
+  --light-grey-background: #f1ebe6f2;
+  --seat-default-color: #8e8e8e;
+  --seat-occupied-color: #171d24;
+  --highlight-orange: #c76f00;
+
+  --admin-input-border-style: 1px solid var(--admin-header-color);
+  --border-radius: 3px;
+  --border-radius-small: 2px;
+  --border-radius-large: 4px;
+
+  --shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24);
+
+  --font-family-base: "Roboto", sans-serif;
+
+  --max-width-login-form: 480px;
+  --max-height-login-form: 294px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* transition: 0.2s 0.1s; */
+}

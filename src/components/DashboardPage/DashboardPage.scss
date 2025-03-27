@@ -1,0 +1,40 @@
+.hallSet {
+  &__list-item {
+    display: flex;
+    gap: 10px;
+    color: #000;
+
+    flex-wrap: nowrap;
+    align-items: center;
+
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.125rem;
+    text-transform: uppercase;
+
+    margin: 0;
+  }
+
+  &__delete-button {
+    position: relative;
+    width: 20px;
+    height: 20px;
+
+    margin-right: -10px;
+
+    box-shadow: var(--shadow);
+    background: url(/img/admin__before-trashcan.png);
+    background-position: center;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    border-radius: var(--border-radius);
+
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 560px) {
+  .admin-section__hallSet {
+    padding-left: 0;
+  }
+}

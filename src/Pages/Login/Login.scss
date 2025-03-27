@@ -1,0 +1,127 @@
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}
+
+.login {
+  color: var(--text-default-color);
+
+  &__container {
+    max-width: 100% !important;
+  }
+
+  &__header {
+    padding-top: 2.125rem;
+    padding-right: 2.625rem;
+    padding-bottom: 2.1875rem;
+    padding-left: 6.5rem;
+
+    max-width: 972px !important;
+    width: 100% !important;
+
+    @media (max-width: 768px) {
+      padding: 0.875rem;
+      width: 100%;
+    }
+
+    @media (max-width: 390px) {
+      padding-left: 0;
+    }
+  }
+
+  &__container-form {
+    max-width: var(--max-width-login-form) !important;
+    width: 100%;
+    max-height: var(--max-height-login-form);
+    height: 100%;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.375rem;
+    line-height: 1.5625rem;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--admin-header-color);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--admin-background-color);
+
+    label {
+      font-weight: 400;
+      font-size: 0.75rem;
+      line-height: 0.875rem;
+
+      color: var(--base-color-admin-label);
+    }
+
+    input {
+      border: 1px solid var(--admin-input-text-color-border);
+      border-radius: 0;
+      color: var(--admin-input-text-color) !important;
+      width: 272px !important;
+
+      &:focus {
+        outline: var(--admin-header-color);
+        border-color: var(--admin-header-color);
+      }
+
+      &::placeholder {
+        color: var(--admin-input-text-color);
+      }
+    }
+
+    button {
+      max-width: 189px;
+      width: 100%;
+
+      border-radius: var(--border-radius);
+      border: none !important;
+      padding: 0.75rem;
+
+      font-size: 0.875rem;
+      font-weight: 500;
+      font-family: inherit;
+      line-height: 1rem;
+      text-transform: uppercase;
+
+      background-color: var(--primary-button-color) !important;
+      transition: border-color 0.25s;
+      box-shadow: var(--shadow);
+
+      cursor: pointer;
+
+      @include hover {
+        background-color: var(--primary-button-color-hover) !important;
+        border: none !important;
+      }
+    }
+
+    button:active {
+      background-color: var(--admin-header-color) !important;
+      border: none !important;
+    }
+
+    button:focus,
+    button:focus-visible {
+      outline: 4px auto -webkit-focus-ring-color;
+    }
+  }
+}

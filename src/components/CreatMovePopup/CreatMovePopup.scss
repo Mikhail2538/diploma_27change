@@ -1,0 +1,215 @@
+.modal {
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+
+    max-width: 972px;
+    width: 100%;
+
+    align-items: center;
+    background: var(--admin-background-color);
+  }
+
+  &__header {
+    position: relative;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    background-color: var(--admin-header-color);
+    color: #fff;
+
+    height: 57px;
+    padding: 16px 42px 14px;
+
+    width: 100%;
+    letter-spacing: 0;
+    white-space: nowrap;
+
+    h2 {
+      font-size: 1.375rem;
+      font-weight: 700;
+      line-height: 1.5625rem;
+      text-transform: uppercase;
+
+      margin: 0;
+    }
+  }
+
+  &__close {
+    width: 22px;
+    height: 22px;
+    background-image: url(/img/admin__close-button.png);
+    background-size: cover;
+
+    border: none;
+    cursor: pointer;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 30px;
+    max-width: 768px;
+
+    label {
+      color: var(--base-color-admin-label);
+    }
+
+    input {
+      width: 100%;
+      height: 36px;
+
+      padding: 8px;
+
+      background-color: #fff;
+
+      outline: none;
+      border: 1px solid var(--admin-input-text-color-border);
+
+      &:focus {
+        outline: var(--admin-header-color);
+        border-color: var(--admin-header-color);
+      }
+
+      &::placeholder {
+        color: var(--admin-input-text-color);
+      }
+    }
+
+    textarea {
+      width: 100%;
+      height: 80px;
+
+      padding: 8px;
+
+      resize: none;
+      outline: none;
+      border: 1px solid var(--admin-input-text-color-border);
+
+      &:focus {
+        outline: var(--admin-header-color);
+        border-color: var(--admin-header-color);
+      }
+
+      &::placeholder {
+        color: var(--admin-input-text-color);
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0 0;
+  }
+}
+
+.hidden-input {
+  display: none;
+}
+
+.btn-box {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1rem;
+
+  border-radius: var(--border-radius) !important;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+.btn__primary {
+  max-width: 194px;
+  width: 100%;
+  height: 40px;
+
+  background-color: var(--primary-button-color) !important;
+  color: #fff !important;
+
+  &:active {
+    background-color: var(--admin-header-color) !important;
+    border: none !important;
+  }
+}
+
+.btn__secondary {
+  max-width: 139px;
+  width: 100%;
+  height: 40px;
+
+  background-color: #fff !important;
+  color: var(--admin-header-color) !important;
+
+  &:active {
+    background-color: var(--admin-header-color) !important;
+    color: #fff !important;
+    border: none !important;
+  }
+}
+
+.btn__upload {
+  max-width: 194px;
+  width: 100%;
+  height: 40px;
+
+  text-align: center;
+
+  background-color: var(--primary-button-color) !important;
+  color: #fff !important;
+
+  &:active {
+    background-color: var(--admin-header-color) !important;
+    border: none !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .modal {
+    &__actions {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__header {
+      padding: 16px 32px 14px;
+    }
+  }
+
+  .btn-box {
+    max-width: 200px;
+    width: 100%;
+  }
+}

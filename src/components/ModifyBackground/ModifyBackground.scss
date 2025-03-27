@@ -1,0 +1,28 @@
+.containerBg {
+  position: relative;
+  min-height: 100vh;
+  overflow-y: auto;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  z-index: 1;
+}
+
+.bgImgMain {
+  background-image: url("../../../img/background-main.jpg");
+}
+
+.bgImgLogin {
+  background-image: url("../../../img/background-login.jpg");
+
+  &::after{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+}

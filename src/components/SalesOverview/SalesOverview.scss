@@ -1,0 +1,32 @@
+.open-sales {
+  &__tittle {
+    text-align: center;
+
+    margin-bottom: 29px;
+  }
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    button {
+      height: 40px;
+      width: 270px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      line-height: 1rem;
+
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+
+      background-color: var(--primary-button-color);
+      color: white;
+
+      &:active {
+        background-color: var(--admin-header-color) !important;
+        border: none !important;
+      }
+    }
+  }
+}
